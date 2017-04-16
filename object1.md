@@ -9,6 +9,18 @@
 所有的原型最终都指向Object原型，Object原型中的constructor指针属性指向null  
 
 ## 创建对象
+### 工厂模式
+通过工厂模式写原型，通过对象字面量方式实例化对象   
+```
+function test (name, age) {
+    var o = new Object ();
+    o.name = name;
+    o,age = age;
+    return o;
+}
+var person1 = test('john', 20);
+```
+
 ### 构造函数
 Js中预先定义了一些原型，例如Object、Array,string等  
 通过new关键字来调用构造函数，实例化对象，分为如下四步：  
